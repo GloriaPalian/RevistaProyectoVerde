@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revista digital sobre tecnología verde, energías limpias e innovación ambiental.">
+  <title>Proyecto Verde - Tecnología Verde</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+.Estilo1 {color: #006600}
+  .Estilo3 {color: #000000; font-weight: bold; font-size: 14px; }
+  .Estilo4 {font-size: 14px; color: #000000;}
+  .Estilo5 {
+	font-size: 24px;
+	font-weight: bold;
+}
+  .Estilo6 {
+	color: #000000;
+	font-weight: bold;
+}
+  .Estilo9 {color: #FFFFFF; font-weight: bold; }
+  .Estilo10 {color: #FFFFFF}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="imagenes/logoPV1.png" alt="Logo Proyecto Verde" class="logo">
+      <h1>Revista Proyecto Verde</h1>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tecnologia.html" class="active">Tecnología Verde</a></li>
+        <li><a href="energias.html">Energías Limpias</a></li>
+        <li><a href="cuidado.html">Cuidado del Planeta</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="contenido-pagina">
+      <h2 class="estilo1 Estilo5">Tecnología Verde</h2>
+      <p class="Estilo6">
+        En esta sección encontrarás artículos e investigaciones sobre las últimas 
+        tecnologías sostenibles, desde sistemas de energía renovable hasta 
+        innovaciones en transporte ecológico y reciclaje inteligente. 
+        Nuestro objetivo es mostrar cómo la ciencia y la innovación pueden 
+        ayudar a cuidar el medio ambiente.      </p>
+     <table width="872" border="1" cellpadding="10" bordercolor="#DAA520" bgcolor="#FFFFFF" style="margin: 0 auto; text-align: center;">
+  <tr>
+    <!-- Celda 1: Video -->
+    <td width="500" height="200">
+      <iframe width="530" height="300"
+        src="https://www.youtube.com/embed/_dWaMJb7FnE"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </td>
+
+    <!-- Celda 2: Comentario -->
+    <td width="500">
+      <p align="center" class="Estilo3">
+        Arve: 11 años liderando el paisajismo e infraestructura verde en el Perú
+      </p>
+      <p align="justify" class="Estilo4">
+        Con más de una década de experiencia, Arve se consolida como la empresa líder en paisajismo e infraestructura verde en el país. 
+        A lo largo de 11 años, hemos sido pioneros en la implementación de jardines verticales, techos verdes y diseño bioclimático especializado 
+        para edificaciones en ciudades, contribuyendo a un entorno urbano más saludable y sostenible.
+      </p>
+    </td>
+  </tr>
+</table>
+
+
+      <p>&nbsp;</p>
+      <div class="botones-tablas">
+        <button onClick="seleccionarBoton(this); mostrarTabla(1)">Reciclaje inteligente</button>
+        <button onClick="seleccionarBoton(this); mostrarTabla(2)">Transporte eléctrico</button>
+        <button onClick="seleccionarBoton(this); mostrarTabla(3)">Energía renovable</button>
+      </div>
+      <div id="tabla1" class="tabla-container">
+        <table>
+          <thead>
+            <tr>
+              <th>PROYECTO</th>
+              <th>DESCRIPCIÓN</th>
+              <th>HACER CLIC EN IMAGEN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="Estilo9">Reciclaje con IA</span></td>
+              <td><span class="Estilo9">Máquinas que separan residuos automáticamente usando inteligencia artificial.</span></td>
+              <td><a href="https://ecoinventos.com/recycleye/" target="_blank"><img src="imagenes/reciclaje-ia.jpg" alt="Reciclaje IA"></a></td>
+            </tr>
+            <tr>
+              <td><span class="Estilo9">Contenedores inteligentes</span></td>
+              <td><span class="Estilo9">Recolectores que detectan el tipo de residuo y optimizan su clasificación.</span></td>
+              <td><a href="https://telefonicatech.com/blog/reciclaje-contenedores-inteligentes" target="_blank"><img src="imagenes/contenedor-inteligente.jpg" alt="Contenedor                            inteligente"></a></td>
+            </tr>
+            <tr>
+              <td><span class="Estilo9">Robot de limpieza</span></td>
+              <td><span class="Estilo9">Robot autónomo que limpia y recolecta basura en espacios públicos.</span></td>
+              <td><a href="https://ecosistemastartup.com/umiclean-el-robot-que-revoluciona-la-limpieza-urbana/" target="_blank"><img src="imagenes/robot-limpieza.jpeg" alt=                          "Robot de limpieza"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="tabla2" class="tabla-container">
+        <table>
+          <thead>
+            <tr>
+              <th>VEHÍCULO</th>
+              <th>DESCRIPCIÓN</th>
+              <th>HACER CLIC EN IMAGEN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="Estilo9">Bicicleta eléctrica</span></td>
+              <td><span class="Estilo9">Medio de transporte ecológico y rápido para la ciudad.</span></td>
+              <td><a href="https://www.totemusa.com/es/blogs/news/are-e-bikes-safe-for-kids?srsltid=AfmBOoqvoB72ob86ASOCivb9sxx2Xd-sZtLWWWfq4L74UumO7q1SfSuR" target="_blank"><img src=                            "imagenes/bici-electrica.jpg" alt="Bicicleta eléctrica"></a></td>
+            </tr>
+            <tr>
+              <td><span class="Estilo9">Auto eléctrico</span></td>
+              <td><strong><span class="Estilo10">Vehículo que funciona con batería recargable y no produce emisiones</span>.</strong></td>
+              <td><a href="https://autecoblue.com/blog-como-funcionan-los-carros-electricos/" target="_blank"><img src="imagenes/auto-electrico.jpg"alt="Auto eléctrico" class=                          "img-pequena"></a></td>
+            </tr>
+            <tr>
+              <td><span class="Estilo9">Monopatín eléctrico</span></td>
+              <td><span class="Estilo9">Alternativa de movilidad urbana rápida y sin contaminación.</span></td>
+              <td><a href="https://www.archdaily.pe/pe/931375/monopatines-electricos-la-micromovilidad-urbana-como-estrategia-para-reducir-la-contaminacion" target="_blank">                           <img src="imagenes/monopatin-electrico.jpg" alt="Monopatín eléctrico"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="tabla3" class="tabla-container">
+        <table>
+          <thead>
+            <tr>
+              <th>FUENTE</th>
+              <th>DESCRIPCIÓN</th>
+              <th>HACER CLIC EN IMAGEN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="Estilo9">Panel solar</span></td>
+              <td><span class="Estilo9">Dispositivo que convierte energía solar en electricidad.</span></td>
+              <td><a href="https://ecofener.com/blog/kw-se-convierte-la-energia-solar-energia-electrica/"target="_blank"><img src="imagenes/panel-solar.jpg" alt="Panel solar">                            </a></td>
+            </tr>
+            <tr>
+              <td><span class="Estilo9">Aerogenerador</span></td>
+              <td><span class="Estilo9">Turbina que produce energía eléctrica a partir del viento.</span></td>
+              <td><a href="https://www.enelgreenpower.com/es/learning-hub/energias-renovables/energia-eolica/aerogenerador" target="_blank"><img src=                          "imagenes/aerogenerador.jpg" alt="Aerogenerador" class="img-pequena"></a></td>
+            </tr>
+            <tr>
+              <td><span class="Estilo9">Central hidroeléctrica</span></td>
+              <td><span class="Estilo9">Instalación que genera electricidad utilizando el flujo del agua.</span></td>
+              <td><a href="https://www.paradavisual.com/como-generar-electricidad-con-el-agua-que-fluye-por-las-tuberias-de-tu-hogar/" target="_blank"><img src=                          "imagenes/central-hidroelectrica.jpg" alt="Central hidroeléctrica"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:right;"><a href="index.html"><strong>← Volver al Inicio</strong></a></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Proyecto Verde - Creado por <span class="autor">Gloria Palian</span></p>
+  </footer>
+  <script>
+    function mostrarTabla(num) {
+      document.querySelectorAll('.tabla-container').forEach(tabla => {
+        tabla.style.display = 'none';
+      });
+      document.getElementById('tabla' + num).style.display = 'block';
+    }
+    function seleccionarBoton(boton) {
+      const botones = document.querySelectorAll('.botones-tablas button');
+      botones.forEach(b => b.classList.remove('active'));
+      boton.classList.add('active');
+    }
+  </script>
+</body>
+</html>

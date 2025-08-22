@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revista digital sobre tecnología verde, energías limpias e innovación ambiental.">
+  <title>Proyecto Verde - Formulario de Compromiso Ambiental</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="imagenes/logoPV1.png" alt="Logo Proyecto Verde" class="logo">
+      <h1> Revista Proyecto Verde </h1>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tecnologia.html">Tecnología Verde</a></li>
+        <li><a href="energias.html">Energías Limpias</a></li>
+        <li><a href="cuidado.html">Cuidado del Planeta</a></li>
+        <li><a href="formulario.html" class="active">Formulario</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="formRegistro" action="https://formsubmit.co/09908914@iestpluisnegreiros.edu.pe" method="POST">
+      <h2>
+        <span style="font-size: 36px;">🌎</span>
+        ¡Comprométete con el Planeta!
+        <span style="font-size: 36px;">💚</span>
+      </h2>
+
+      <!-- Pregunta 1 -->
+      <h4>🌱 ¿Qué prácticas de Tecnología Verde aplicas en tu vida diaria?</h4>
+      <div class="opciones">
+        <label><input type="checkbox" name="acciones" value="bajo_consumo"> Uso de dispositivos de bajo consumo energético</label><br>
+        <label><input type="checkbox" name="acciones" value="reciclaje_tecnologico"> Reciclaje responsable de aparatos tecnológicos</label><br>
+        <label><input type="checkbox" name="acciones" value="transporte_ecologico"> Uso de transporte ecológico (bicicleta, vehículo eléctrico)</label><br>
+        <label><input type="checkbox" name="acciones" value="reduccion_plasticos"> Reducción del uso de plásticos</label><br>
+        <label><input type="checkbox" name="acciones" value="reforestacion"> Participación en reforestación</label><br>
+        <label><input type="checkbox" name="acciones" value="consumo_local"> Consumo de productos locales</label><br>
+        <label><input type="checkbox" name="acciones" value="compostaje"> Compostaje en casa</label>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <h4>⏰ ¿Con qué frecuencia aplicas estas acciones?</h4>
+      <select name="frecuencia" class="select">
+        <option value="seleccionar">Seleccione</option>
+        <option value="diario">Diariamente</option>
+        <option value="semanal">Semanalmente</option>
+        <option value="mensual">Mensualmente</option>
+        <option value="ocasional">Ocasionalmente</option>
+      </select>
+
+      <!-- Pregunta 3 -->
+      <h4>🤝 Nivel de compromiso ambiental:</h4>
+      <div class="opciones">
+        <label><input type="radio" name="compromiso" value="bajo"> Bajo</label>
+        <label><input type="radio" name="compromiso" value="medio"> Medio</label>
+        <label><input type="radio" name="compromiso" value="alto"> Alto</label>
+        <label><input type="radio" name="compromiso" value="total"> Total</label>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <h4>📚 ¿Sobre qué temas deseas recibir información?</h4>
+      <div class="opciones">
+        <label><input type="checkbox" name="temas" value="energias_limpias"> Energías limpias</label><br>
+        <label><input type="checkbox" name="temas" value="reciclaje"> Reciclaje</label><br>
+        <label><input type="checkbox" name="temas" value="tecnologia_verde"> Tecnología verde</label><br>
+        <label><input type="checkbox" name="temas" value="noticias_ambientales"> Noticias ambientales</label>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <h4>👤 Edad:</h4>
+      <select name="edad" class="select">
+        <option value="seleccionar">Seleccione</option>
+        <option value="menor_18">Menor de 18</option>
+        <option value="18_25">18 - 25 años</option>
+        <option value="26_40">26 - 40 años</option>
+        <option value="41_60">41 - 60 años</option>
+        <option value="60_mas">Más de 60 años</option>
+      </select>
+
+      <!-- Pregunta 6 -->
+      <h4>🏡 Lugar de residencia:</h4>
+      <input type="text" name="ciudad" placeholder="Ciudad, región o país" class="input-text">
+
+      <!-- Pregunta 7 -->
+      <h4>📰 ¿Quieres suscribirte a nuestro boletín ecológico?</h4>
+      <div class="opciones">
+        <label><input type="radio" name="boletin" value="si"> Sí</label>
+        <label><input type="radio" name="boletin" value="no"> No</label>
+      </div>
+
+      <!-- Datos de contacto -->
+      <div class="datos-contacto">
+        <h4>Datos de contacto</h4>
+        <div class="input-group">
+          <label for="nombre">🪪 Nombre completo :</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="input-group">
+          <label for="correo">📧 Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+        </div>
+        <div class="input-group">
+          <label for="telefono">📱 Número de celular:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Tu número">
+        </div>
+      </div>
+
+      <!-- Comentarios -->
+      <h4>Comentarios o sugerencias:</h4>
+      <textarea name="comentarios" rows="5" placeholder="Escribe aquí tus ideas o sugerencias..."></textarea>
+
+      <!-- FormSubmit -->
+      <input type="hidden" name="_next" value="https://tusitio.com/formulario.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="submit" value="Enviar Compromiso">
+
+      <div id="mensajeRegistro">¡Gracias por registrarte! 🌱</div>
+      <p style="text-align:center;"><a href="index.html">← Volver al inicio</a></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Proyecto Verde - Creado por <span class="autor">Gloria Palian</span></p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('formRegistro');
+    const mensaje = document.getElementById('mensajeRegistro');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      mensaje.style.display = 'block'; 
+      form.reset(); 
+
+      setTimeout(() => {
+        mensaje.style.display = 'none'; 
+      }, 5000);
+
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+      }).then(() => {
+        console.log("Formulario enviado a FormSubmit");
+      }).catch(err => console.error("Error al enviar: ", err));
+    });
+  </script>
+</body>
+</html>

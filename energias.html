@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revista digital sobre tecnología verde, energías limpias e innovación ambiental.">
+  <title>Proyecto Verde - Energías Limpias</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function mostrarTabla(num, boton) {
+      // Ocultar todas las tablas
+      document.querySelectorAll('.tabla-container').forEach(tabla => {
+        tabla.style.display = 'none';
+      });
+      // Mostrar la seleccionada
+      document.getElementById('tabla' + num).style.display = 'block';
+
+      // Quitar clase "active" de todos los botones
+      document.querySelectorAll('.botones-tablas button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      // Marcar como activo el botón presionado
+      boton.classList.add('active');
+    }
+  </script>
+  <style type="text/css">
+<!--
+.Estilo2 {font-size: 14px}
+.Estilo3 {color: #000000}
+.Estilo4 {font-size: 16px; }
+.Estilo5 {font-size: 24px; font-weight: bold; }
+.Estilo6 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+-->
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="imagenes/logoPV1.png" alt="Logo Proyecto Verde" class="logo">
+      <h1>Revista Proyecto Verde</h1>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tecnologia.html">Tecnología Verde</a></li>
+        <li><a href="energias.html" class="active">Energías Limpias</a></li>
+        <li><a href="cuidado.html">Cuidado del Planeta</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contenido-pagina">
+      <h2 class="Estilo5">Energías Limpias</h2>
+      <p class="Estilo3">
+        Las energías limpias como la solar, eólica e hidroeléctrica son fundamentales para reducir la contaminación del planeta.  
+        Estas fuentes de energía no emiten gases contaminantes y ayudan a combatir el cambio climático.
+      </p>
+      <table width="872" border="1" cellpadding="10" bordercolor="#DAA520" bgcolor="#FFFFFF" style="margin: 0 auto; text-align: center;">
+  <tr>
+    <!-- Celda 1: Video -->
+    <td width="500" height="200">
+      <iframe width="530" height="300"
+        src="https://www.youtube.com/embed/-ci0e24QSJo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </td>
+
+    <!-- Celda 2: Comentario -->
+    <td width="500">
+      <p align="center" class="Estilo3">Empresa de Generación Huallaga S.A.: 100% ENERGÍA LIMPIA PARA EL PERÚ</p>
+      <p align="justify" class="Estilo4 Estilo2 Estilo3">
+        En el corazón del Perú la generación de energía nunca se detiene. Se genera energía limpia con altos estándares de calidad, 
+        profesionalismo, protección ambiental y responsabilidad social con nuestro entorno. 
+        100% Energía limpia para el Perú.
+      </p>
+    </td>
+  </tr>
+</table>
+
+         
+
+      <!-- Botones para cambiar tablas -->
+      <div class="botones-tablas" style="text-align:center;">
+        <button onClick="mostrarTabla(1,this)">Energía Solar</button>
+        <button onClick="mostrarTabla(2,this)">Energía Eólica</button>
+        <button onClick="mostrarTabla(3,this)">Energía Hidroeléctrica</button>
+      </div>
+
+      <!-- Tabla 1: Energía Solar -->
+      <div id="tabla1" class="tabla-container">
+        <table>
+          <tr>
+            <th>INNOVACIÓN SOLAR</th>
+            <th>DESCRIPCIÓN</th>
+            <th>HACER CLIC EN IMAGEN</th>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Paneles residenciales</span></td>
+            <td><span class="Estilo6">Instalación de paneles solares en casas y edificios.</span></td>
+            <td><a href="https://www.solarreviews.com/es/blog/paneles-solares-residenciales" target="_blank"><img src="imagenes/solar1.jpg" alt="Paneles residenciales" width="150" height="70"></a></td>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Granjas solares</span></td>
+            <td><span class="Estilo6">Plantas solares a gran escala para generar electricidad.</span></td>
+            <td><a href="https://lrpenergy.com/es/todo-lo-que-necesitas-saber-sobre-las-granjas-solares/" target="_blank"><img src="imagenes/solar2.jpg" alt="Granjas solares" width="150" height="70"></a></td>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Cargadores solares</span></td>
+            <td><span class="Estilo6">Dispositivos portátiles que convierten luz solar en energía para dispositivos.</span></td>
+            <td><a href="https://autosolar.pe/energia-solar/como-funciona-un-panel-solar-portatil?srsltid=AfmBOopzxE481WnCMQa_5sO15hFtRQ2ZN9E-fAjUXZYVIXh5tZb7JDS4" target="_blank"><img src="imagenes/solar3.jpg" alt="Cargadores solares" width="150" height="70"></a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Tabla 2: Energía Eólica -->
+      <div id="tabla2" class="tabla-container">
+        <table>
+          <tr>
+            <th>EL PODER DEL VIENTO</th>
+            <th>DESCRIPCIÓN</th>
+            <th>HACER CLIC EN IMAGEN</th>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Turbinas urbanas</span></td>
+            <td><span class="Estilo6">Pequeñas turbinas para generar energía en ciudades.</span></td>
+            <td><a href="https://www.tomorrow.city/es/pueden-usarse-turbinas-energia-eolica-ciudad/" target="_blank"><img src="imagenes/eolica1.jpg" alt="Turbinas urbanas" width="150" height="70"></a></td>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Parques eólicos</span></td>
+            <td><span class="Estilo6">Grandes instalaciones en zonas con mucho viento.</span></td>
+            <td><a href="https://www.repsol.com/es/energia-avanzar/energia/parques-eolicos/index.cshtml" target="_blank"><img src="imagenes/eolica2.jpg" alt="Parques eólicos" width="150" height="70"></a></td>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Molinos inteligentes</span></td>
+            <td><span class="Estilo6">Molinos con sensores que maximizan la producción de energía.</span></td>
+            <td><a href="https://www.enair.es/es/aerogeneradores/e200" target="_blank"><img src="imagenes/eolica3.jpg" alt="Molinos inteligentes" width="150" height="70" border="0"></a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Tabla 3: Energía Hidroeléctrica -->
+      <div id="tabla3" class="tabla-container">
+        <table>
+          <tr>
+            <th>EL PODER DEL AGUA</th>
+            <th>DESCRIPCIÓN</th>
+            <th>HACER CLIC EN IMAGEN</th>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Mini centrales</span></td>
+            <td><span class="Estilo6">Centrales pequeñas para comunidades locales.</span></td>
+            <td><a href="https://www.100greensolutions.com/es/publication/las-pequenas-instalaciones-hidroelectricas-una-solucion-viable-para-las-comunidades-locales/" target="_blank"><img src="imagenes/hidro1.jpg" alt="Mini centrales" width="150" height="70"></a></td>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Represas inteligentes</span></td>
+            <td><span class="Estilo6">Control automatizado para generar electricidad de forma eficiente.</span></td>
+            <td><a href="https://es.clickpetroleoegas.com.br/revolucao-no-campo-embalses-inteligentes-reduzem-perdas-de-agua-em-98-e-salvam-o-agronegocio-mhbb01/" target="_blank"><img src="imagenes/hidro2.jpg" alt="Represas inteligentes" width="150" height="70"></a></td>
+          </tr>
+          <tr>
+            <td><span class="Estilo6">Centrales Hidroeléctricas Industriales</span></td>
+            <td><span class="Estilo6">Plantas grandes que proveen energía a ciudades o industrias.</span></td>
+            <td><a href="https://www.foronuclear.org/descubre-la-energia-nuclear/preguntas-y-respuestas/sobre-distintas-fuentes-de-energia/que-es-una-central-hidroelectrica/" target="_blank"><img src="imagenes/hidro3.jpg" alt="Central hidroeléctrica" width="150" height="70"></a></td>
+          </tr>
+        </table>
+      </div>
+
+      <p align="right"><a href="index.html"><strong>← Volver al Inicio</strong></a></p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Proyecto Verde - Creado por <span class="autor">Gloria Palian</span></p>
+  </footer>
+</body>
+</html>
+

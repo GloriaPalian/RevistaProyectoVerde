@@ -1,0 +1,330 @@
+/*/* ===== ESTILOS GENERALES ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5fff5;
+  color: #034d1c;
+  line-height: 1.6;
+}
+
+/* ===== CABECERA ===== */
+header {
+  background-image: url('imagenes/O.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 1010px;
+  margin: 20px auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+}
+
+header h1 {
+  color: #034d1c;
+  margin: 10px 0 0;
+  font-size: 2.5em;
+  transition: color 0.3s;
+}
+
+header h1:hover {
+  color: gold;
+}
+
+/* ===== MENÚ ===== */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #034d1c;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #DAA520;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+  max-width: 1010px;
+  margin: 20px auto;
+  padding: 40px 20px;
+  background-color: #fffaf0;
+  border: 4px double #66bb6a;
+  border-radius: 12px;
+  text-align: left;
+}
+
+/* ===== IMÁGENES HERO ===== */
+.hero-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+}
+
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* ===== TABLAS ===== */
+.tabla-container {
+  display: none;
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-image: url('imagenes/fondo-verde.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow-x: auto;
+}
+
+.tabla-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto; /* centra la tabla */
+}
+
+.tabla-container th,
+.tabla-container td {
+  padding: 6px;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #4CAF50;
+  background-color: rgba(200, 230, 201, 0.4);
+  max-width: 120px;
+  word-wrap: break-word;
+}
+
+.tabla-container img {
+  max-width: 125px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsivo para tablas */
+@media screen and (max-width: 600px) {
+  .tabla-container th,
+  .tabla-container td {
+    font-size: 12px;
+    padding: 4px;
+  }
+  .tabla-container img {
+    max-width: 60px;
+  }
+}
+
+/* ===== BOTONES DE TABLAS ===== */
+.botones-tablas {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.botones-tablas button {
+  margin: 5px;
+  padding: 10px 20px;
+  background: #056f34;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s, background 0.3s;
+}
+
+.botones-tablas button:hover {
+  background: #45a049;
+}
+
+.botones-tablas button.active {
+  color: yellow;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+  max-width: 800px;
+  width: 95%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #034d1c;
+  background-color: #e6f9d5;
+  border-radius: 10px;
+  color: #034d1c;
+  box-sizing: border-box;
+}
+
+form h2 {
+  text-align: center;
+  color: #034d1c;
+}
+
+form h4 {
+  text-align: left;
+  color: #034d1c;
+}
+
+.select,
+.input-text,
+textarea {
+  display: block;
+  margin: 6px auto;
+  padding: 6px;
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid #026937;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #026937;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #034d1c;
+}
+
+#mensajeRegistro {
+  display: none;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Responsivo para formulario */
+@media screen and (max-width: 600px) {
+  form {
+    padding: 15px;
+    width: 95%;
+  }
+  .select,
+  .input-text,
+  textarea {
+    width: 95%;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #034d1c;
+  color: white;
+  border-radius: 12px;
+  max-width: 1010px;
+  margin: 20px auto;
+}
+
+footer .autor {
+  font-weight: bold;
+  color: #d4af37;
+}
+
+/* ===== CUADROS ===== */
+.cuadros-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cuadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cuadro img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cuadro div {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1em;
+}
+
+.marco {
+  border: 2px solid #FFC107;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  padding: 4px;
+  background-color: white;
+}
+
+/* ===== VIDEO ===== */
+.video-container {
+  max-width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-container video {
+  width: 90%;
+  height: auto;
+  max-width: 600px; /* opcional: no dejar que sea demasiado grande */
+  
+}
+
+.video-container figcaption {
+  color: #034d1c;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 4px;
+}
+
+  
+  

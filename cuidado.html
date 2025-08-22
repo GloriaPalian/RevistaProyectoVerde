@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revista digital sobre tecnología verde, energías limpias e innovación ambiental.">
+  <title>Proyecto Verde - Cuidado del Planeta</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function mostrarTabla(num, boton) {
+      // Ocultar todas las tablas
+      document.querySelectorAll('.tabla-container').forEach(tabla => {
+        tabla.style.display = 'none';
+      });
+      // Mostrar la tabla seleccionada
+      document.getElementById('tabla' + num).style.display = 'block';
+
+      // Resetear botones
+      document.querySelectorAll('.botones-tablas button').forEach(b => {
+        b.classList.remove('active');
+      });
+      // Activar el botón actual
+      boton.classList.add('active');
+    }
+  </script>
+  <style type="text/css">
+<!--
+.Estilo1 {color: #006600}
+.Estilo3 {font-size: 14px}
+.Estilo4 {color: #000000}
+.Estilo5 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+-->
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="imagenes/logoPV1.png" alt="Logo Proyecto Verde" class="logo">
+      <h1>Revista Proyecto Verde</h1>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tecnologia.html">Tecnología Verde</a></li>
+        <li><a href="energias.html">Energías Limpias</a></li>
+        <li><a href="cuidado.html" class="active">Cuidado del Planeta</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <main>
+  <section class="contenido-pagina">
+    <h2 class="Estilo2 Estilo1">Cuidado del Planeta</h2>
+    <p><strong>
+     Cuidar el planeta es responsabilidad de todos. Acciones simples como reciclar, ahorrar agua y plantar árboles marcan la diferencia.
+     Educar a otros sobre la importancia del medio ambiente también es una forma de proteger nuestro hogar común.</strong></p>
+   <table width="872" border="1" cellpadding="10" bordercolor="#DAA520" bgcolor="#FFFFFF" style="margin: 0 auto; text-align: center;">
+  <tr>
+    <!-- Celda 1: Video -->
+    <td width="500" height="200">
+      <iframe width="530" height="300"
+        src="https://www.youtube.com/embed/XfgipW3HADI"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </td>
+
+    <!-- Celda 2: Comentario -->
+    <td width="500">
+      <p align="center" class="Estilo3 Estilo4">CHANCAY APUESTA POR EL CUIDADO DEL PLANETA</p>
+      <p align="justify" class="Estilo2 Estilo3 Estilo4">
+        La Municipalidad Distrital de Chancay motiva a los vecinos a adoptar hábitos sostenibles como ahorrar agua, reciclar, 
+        reducir plásticos y mantener limpios los espacios públicos. Señalan que el cuidado del planeta no es una moda, 
+        sino una responsabilidad permanente que garantiza un futuro saludable para las próximas generaciones.
+      </p>
+    </td>
+  </tr>
+</table>
+
+     
+    <!-- Botones para cambiar tablas -->
+    <div class="botones-tablas" style="text-align:center;">
+      <button onClick="mostrarTabla(1,this)">Reciclaje</button>
+      <button onClick="mostrarTabla(2,this)">Reforestación</button>
+      <button onClick="mostrarTabla(3,this)">Concienciación</button>
+    </div>
+
+    <!-- Tabla 1: Reciclaje -->
+    <div id="tabla1" class="tabla-container">
+      <table>
+        <tr>
+          <th>ACCIONES AMBIENTALES</th>
+          <th>DESCRIPCIÓN</th>
+          <th>HECER CLIC EN LA IMAGEN</th>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Reciclaje comunitario</span></td>
+          <td><span class="Estilo5">Campañas locales para clasificar y reutilizar residuos.</span></td>
+          <td><a href="https://besco.com.pe/blog/formas-reciclaje-maneras-incentivarlo/" target="_blank"><img src="imagenes/reciclaje1.jpg" alt="Reciclaje comunitario" width="150" height="70"></a></td>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Puntos de reciclaje</span></td>
+          <td><span class="Estilo5">Instalación de contenedores para papel, plástico y vidrio.</span></td>
+          <td><a href="https://portal.muniplibre.gob.pe/puntos-ecologicos-incentivan-al-reciclaje-en-pueblo-libre/" target="_blank"><img src="imagenes/reciclaje2.jpg" alt="Puntos de reciclaje" width="150" height="70"></a></td>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Educación ambiental</span></td>
+          <td><span class="Estilo5">Talleres y charlas sobre la importancia del reciclaje.</span></td>
+          <td><a href="https://www.pucp.edu.pe/climadecambios/noticias/la-educacion-ambiental-y-la-participacion-ciudadana/" target="_blank"><img src="imagenes/reciclaje3.jpg" alt="Educación ambiental" width="150" height="70"></a></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Tabla 2: Reforestación -->
+    <div id="tabla2" class="tabla-container">
+      <table>
+        <tr>
+          <th>SEMBRANDO FUTURO</th>
+          <th>DESCRIPCIÓN</th>
+          <th>HECER CLIC EN LA IMAGEN</th>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Plantación urbana</span></td>
+          <td><span class="Estilo5">Creación de parques y jardines en la ciudad.</span></td>
+          <td><a href="https://www.iberdrola.com/sostenibilidad/que-es-reforestacion" target="_blank"><img src="imagenes/reforestacion1.jpg" alt="Plantación urbana" width="150" height="70"></a></td>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Reforestación rural</span></td>
+          <td><span class="Estilo5">Recuperación de bosques degradados en zonas rurales.</span></td>
+          <td><a href="https://inforegion.pe/comunidades-awajun-reforestaran-200-hectareas-para-recuperar-bosques-degradados-en-san-martin/" target="_blank"><img src="imagenes/reforestacion2.jpg" alt="Reforestación rural" width="150" height="70"></a></td>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Voluntariado verde</span></td>
+          <td><span class="Estilo5">Grupos de voluntarios que plantan árboles y cuidan áreas verdes.</span></td>
+          <td><a href="https://reconoce.org/voluntariado-y-medio-ambiente-cuidando-nuestro-planeta-juntos/" target="_blank"><img src="imagenes/reforestacion3.jpg" alt="Voluntariado verde" width="150" height="70"></a></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Tabla 3: Concienciación -->
+    <div id="tabla3" class="tabla-container">
+      <table>
+        <tr>
+          <th>CONCIENCIA Y PARTICIPACIÓN</th>
+          <th>DESCRIPCIÓN</th>
+          <th>HECER CLIC EN LA IMAGEN</th>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Talleres educativos</span></td>
+          <td><span class="Estilo5">Charlas y actividades en colegios sobre cuidado del medio ambiente.</span></td>
+          <td><a href="https://www.marena.gob.ni/2022/01/31/charlas-para-promover-buens-practicas-ambientales-son-impartidas-por-el-marena-en-masaya/" target="_blank"><img src="imagenes/concienciacion1.jpg" alt="Talleres educativos" width="150" height="70"></a></td>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Redes sociales</span></td>
+          <td><span class="Estilo5">Difusión de información y consejos para proteger el planeta.</span></td>
+          <td><a href="https://ayudaenaccion.org/blog/sostenibilidad/como-cuidar-medio-ambiente-desde-casa/" target="_blank"><img src="imagenes/concienciacion2.jpg" alt="Redes sociales" width="150" height="70"></a></td>
+        </tr>
+        <tr>
+          <td><span class="Estilo5">Eventos comunitarios</span></td>
+          <td><span class="Estilo5">Ferias y actividades para promover la responsabilidad ambiental.</span></td>
+          <td><a href="https://www.udep.edu.pe/hoy/2019/10/i-feria-de-concientizacion-ambiental-reunio-diversas-iniciativas-que-contribuyen-al-medioambiente/" target="_blank"><img src="imagenes/concienciacion3.jpg" alt="Eventos comunitarios" width="150" height="70"></a></td>
+        </tr>
+      </table>
+    </div>
+	<p align="right"><a href="index.html"><strong>← Volver al Inicio</strong></a></p>
+  </section>
+ </main>
+  
+  <footer>
+    <p>&copy; 2025 Proyecto Verde - Creado por <span class="autor">Gloria Palian</span></p>
+  </footer>
+
+</body>
+</html>
