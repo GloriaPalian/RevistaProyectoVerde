@@ -6,7 +6,6 @@
   <meta name="description" content="Revista digital sobre tecnología verde, energías limpias e innovación ambiental.">
   <title>Proyecto Verde - Formulario de Compromiso Ambiental</title>
   <link rel="stylesheet" href="style.css">
- 
 </head>
 <body>
   <header>
@@ -36,19 +35,19 @@
       <!-- Pregunta 1 -->
       <h4>🌱 ¿Qué prácticas de Tecnología Verde aplicas en tu vida diaria?</h4>
       <div class="opciones">
-        <label><input type="checkbox" name="acciones" value="bajo_consumo"> Uso de dispositivos de bajo consumo energético</label><br>
-        <label><input type="checkbox" name="acciones" value="reciclaje_tecnologico"> Reciclaje responsable de aparatos tecnológicos</label><br>
-        <label><input type="checkbox" name="acciones" value="transporte_ecologico"> Uso de transporte ecológico (bicicleta, vehículo eléctrico)</label><br>
-        <label><input type="checkbox" name="acciones" value="reduccion_plasticos"> Reducción del uso de plásticos</label><br>
-        <label><input type="checkbox" name="acciones" value="reforestacion"> Participación en reforestación</label><br>
-        <label><input type="checkbox" name="acciones" value="consumo_local"> Consumo de productos locales</label><br>
-        <label><input type="checkbox" name="acciones" value="compostaje"> Compostaje en casa</label>
+        <label><input type="checkbox" name="acciones[]" value="bajo_consumo"> Uso de dispositivos de bajo consumo energético</label><br>
+        <label><input type="checkbox" name="acciones[]" value="reciclaje_tecnologico"> Reciclaje responsable de aparatos tecnológicos</label><br>
+        <label><input type="checkbox" name="acciones[]" value="transporte_ecologico"> Uso de transporte ecológico (bicicleta, vehículo eléctrico)</label><br>
+        <label><input type="checkbox" name="acciones[]" value="reduccion_plasticos"> Reducción del uso de plásticos</label><br>
+        <label><input type="checkbox" name="acciones[]" value="reforestacion"> Participación en reforestación</label><br>
+        <label><input type="checkbox" name="acciones[]" value="consumo_local"> Consumo de productos locales</label><br>
+        <label><input type="checkbox" name="acciones[]" value="compostaje"> Compostaje en casa</label>
       </div>
 
       <!-- Pregunta 2 -->
       <h4>⏰ ¿Con qué frecuencia aplicas estas acciones?</h4>
-      <select name="frecuencia" class="select">
-        <option value="seleccionar">Seleccione</option>
+      <select name="frecuencia" class="select" required>
+        <option value="" disabled selected>Seleccione</option>
         <option value="diario">Diariamente</option>
         <option value="semanal">Semanalmente</option>
         <option value="mensual">Mensualmente</option>
@@ -67,16 +66,16 @@
       <!-- Pregunta 4 -->
       <h4>📚 ¿Sobre qué temas deseas recibir información?</h4>
       <div class="opciones">
-        <label><input type="checkbox" name="temas" value="energias_limpias"> Energías limpias</label><br>
-        <label><input type="checkbox" name="temas" value="reciclaje"> Reciclaje</label><br>
-        <label><input type="checkbox" name="temas" value="tecnologia_verde"> Tecnología verde</label><br>
-        <label><input type="checkbox" name="temas" value="noticias_ambientales"> Noticias ambientales</label>
+        <label><input type="checkbox" name="temas[]" value="energias_limpias"> Energías limpias</label><br>
+        <label><input type="checkbox" name="temas[]" value="reciclaje"> Reciclaje</label><br>
+        <label><input type="checkbox" name="temas[]" value="tecnologia_verde"> Tecnología verde</label><br>
+        <label><input type="checkbox" name="temas[]" value="noticias_ambientales"> Noticias ambientales</label>
       </div>
 
       <!-- Pregunta 5 -->
       <h4>👤 Edad:</h4>
-      <select name="edad" class="select">
-        <option value="seleccionar">Seleccione</option>
+      <select name="edad" class="select" required>
+        <option value="" disabled selected>Seleccione</option>
         <option value="menor_18">Menor de 18</option>
         <option value="18_25">18 - 25 años</option>
         <option value="26_40">26 - 40 años</option>
@@ -117,12 +116,14 @@
       <textarea name="comentarios" rows="5" placeholder="Escribe aquí tus ideas o sugerencias..."></textarea>
 
       <!-- FormSubmit -->
-      <input type="hidden" name="_next" value="https://tusitio.com/formulario.html">
+      <input type="hidden" name="_subject" value="Nuevo compromiso ambiental - Proyecto Verde">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://gloriapalian.github.io/formulario.html">
       <input type="hidden" name="_captcha" value="false">
 
       <input type="submit" value="Enviar Compromiso">
 
-      <div id="mensajeRegistro">¡Gracias por registrarte! 🌱</div>
+      <div id="mensajeRegistro" style="display:none;">¡Gracias por registrarte! 🌱</div>
       <p style="text-align:center;"><a href="index.html">← Volver al inicio</a></p>
     </form>
   </main>
@@ -135,21 +136,31 @@
     const form = document.getElementById('formRegistro');
     const mensaje = document.getElementById('mensajeRegistro');
 
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); 
-      mensaje.style.display = 'block'; 
-      form.reset(); 
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
 
-      setTimeout(() => {
-        mensaje.style.display = 'none'; 
-      }, 5000);
+      // Capturar datos ANTES de resetear
+      const data = new FormData(form);
 
-      fetch(form.action, {
-        method: form.method,
-        body: new FormData(form)
-      }).then(() => {
-        console.log("Formulario enviado a FormSubmit");
-      }).catch(err => console.error("Error al enviar: ", err));
+      try {
+        await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        // Mostrar mensaje y luego limpiar formulario
+        mensaje.style.display = 'block';
+        form.reset();
+
+        setTimeout(() => {
+          mensaje.style.display = 'none';
+        }, 5000);
+
+      } catch (err) {
+        console.error("Error al enviar: ", err);
+        alert("Hubo un problema al enviar el formulario.");
+      }
     });
   </script>
 </body>
