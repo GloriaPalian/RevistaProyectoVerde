@@ -114,5 +114,15 @@
   <footer>
     <p>&copy; 2025 Proyecto Verde - Creado por <span class="autor">Gloria Palian</span></p>
   </footer>
+
+  <script>
+    // Al enviar el formulario, se ejecuta el reset para limpiar los datos
+    document.getElementById('form-compromiso').addEventListener('submit', function(event){
+      // opcional: retrasar un poco para asegurar que el formulario se envie antes de limpiar
+      setTimeout(() => {
+        this.reset();
+      }, 500);
+    });
+  </script>
 </body>
 </html>
