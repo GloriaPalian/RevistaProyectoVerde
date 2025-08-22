@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Revista digital sobre tecnología verde, energías limpias e innovación ambiental.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Revista digital sobre tecnología verde, energías limpias e innovación ambiental."/>
   <title>Proyecto Verde - Formulario de Compromiso Ambiental</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
     <div class="header-container">
-      <img src="imagenes/logoPV1.png" alt="Logo Proyecto Verde" class="logo">
+      <img src="imagenes/logoPV1.png" alt="Logo Proyecto Verde" class="logo"/>
       <h1>Revista Proyecto Verde</h1>
     </div>
     <nav>
@@ -24,7 +24,7 @@
     </nav>
   </header>
   <main>
-    <form action="https://formspree.io/f/xgvzgnwd" method="POST">
+    <form id="form-compromiso" action="https://formspree.io/f/xgvzgnwd" method="POST">
       <h2>
         <span style="font-size: 36px;">🌎</span>
         ¡Comprométete con el Planeta!
@@ -33,13 +33,13 @@
       <!-- Pregunta 1 -->
       <h4>🌱 ¿Qué prácticas de Tecnología Verde aplicas en tu vida diaria?</h4>
       <div class="opciones">
-        <label><input type="checkbox" name="practicas_tecnologia_verde" value="uso de dispositivos de bajo consumo energetico"> Uso de dispositivos de bajo consumo energético</label><br>
-        <label><input type="checkbox" name="practicas_tecnologia_verde" value="reciclaje responsable de aparatos tecnologicos"> Reciclaje responsable de aparatos tecnológicos</label><br>
-        <label><input type="checkbox" name="practicas_tecnologia_verde" value="uso de transporte ecologico"> Uso de transporte ecológico (bicicleta, vehículo eléctrico)</label><br>
-        <label><input type="checkbox" name="practicas_tecnologia_verde" value="reduccion del uso de plasticos"> Reducción del uso de plásticos</label><br>
-        <label><input type="checkbox" name="practicas_tecnologia_verde" value="participacion en reforestacion"> Participación en reforestación</label><br>
-        <label><input type="checkbox" name="practicas_tecnologia_verde" value="consumo de productos locales"> Consumo de productos locales</label><br>
-        <label><input type="checkbox" name="practicas_tecnologia_verde" value="compostaje en casa"> Compostaje en casa</label>
+        <label><input type="checkbox" name="practicas_tecnologia_verde[]" value="uso de dispositivos de bajo consumo energetico"/> Uso de dispositivos de bajo consumo energético</label><br/>
+        <label><input type="checkbox" name="practicas_tecnologia_verde[]" value="reciclaje responsable de aparatos tecnologicos"/> Reciclaje responsable de aparatos tecnológicos</label><br/>
+        <label><input type="checkbox" name="practicas_tecnologia_verde[]" value="uso de transporte ecologico"/> Uso de transporte ecológico (bicicleta, vehículo eléctrico)</label><br/>
+        <label><input type="checkbox" name="practicas_tecnologia_verde[]" value="reduccion del uso de plasticos"/> Reducción del uso de plásticos</label><br/>
+        <label><input type="checkbox" name="practicas_tecnologia_verde[]" value="participacion en reforestacion"/> Participación en reforestación</label><br/>
+        <label><input type="checkbox" name="practicas_tecnologia_verde[]" value="consumo de productos locales"/> Consumo de productos locales</label><br/>
+        <label><input type="checkbox" name="practicas_tecnologia_verde[]" value="compostaje en casa"/> Compostaje en casa</label>
       </div>
       <!-- Pregunta 2 -->
       <h4>⏰ ¿Con qué frecuencia aplicas estas acciones?</h4>
@@ -53,18 +53,18 @@
       <!-- Pregunta 3 -->
       <h4>🤝 Nivel de compromiso ambiental:</h4>
       <div class="opciones">
-        <label><input type="radio" name="nivel_compromiso" value="bajo"> Bajo</label>
-        <label><input type="radio" name="nivel_compromiso" value="medio"> Medio</label>
-        <label><input type="radio" name="nivel_compromiso" value="alto"> Alto</label>
-        <label><input type="radio" name="nivel_compromiso" value="total"> Total</label>
+        <label><input type="radio" name="nivel_compromiso" value="bajo"/> Bajo</label>
+        <label><input type="radio" name="nivel_compromiso" value="medio"/> Medio</label>
+        <label><input type="radio" name="nivel_compromiso" value="alto"/> Alto</label>
+        <label><input type="radio" name="nivel_compromiso" value="total"/> Total</label>
       </div>
       <!-- Pregunta 4 -->
       <h4>📚 ¿Sobre qué temas deseas recibir información?</h4>
       <div class="opciones">
-        <label><input type="checkbox" name="temas_interes" value="energias limpias"> Energías limpias</label><br>
-        <label><input type="checkbox" name="temas_interes" value="reciclaje"> Reciclaje</label><br>
-        <label><input type="checkbox" name="temas_interes" value="tecnologia verde"> Tecnología verde</label><br>
-        <label><input type="checkbox" name="temas_interes" value="noticias ambientales"> Noticias ambientales</label>
+        <label><input type="checkbox" name="temas_interes[]" value="energias limpias"/> Energías limpias</label><br/>
+        <label><input type="checkbox" name="temas_interes[]" value="reciclaje"/> Reciclaje</label><br/>
+        <label><input type="checkbox" name="temas_interes[]" value="tecnologia verde"/> Tecnología verde</label><br/>
+        <label><input type="checkbox" name="temas_interes[]" value="noticias ambientales"/> Noticias ambientales</label>
       </div>
       <!-- Pregunta 5 -->
       <h4>👤 Edad:</h4>
@@ -78,36 +78,36 @@
       </select>
       <!-- Pregunta 6 -->
       <h4>🏡 Lugar de residencia:</h4>
-      <input type="text" name="lugar_residencia" placeholder="Ciudad, región o país" class="input-text">
+      <input type="text" name="lugar_residencia" placeholder="Ciudad, región o país" class="input-text"/>
       <!-- Pregunta 7 -->
       <h4>📰 ¿Quieres suscribirte a nuestro boletín ecológico?</h4>
       <div class="opciones">
-        <label><input type="radio" name="suscripcion_boletin" value="si"> Sí</label>
-        <label><input type="radio" name="suscripcion_boletin" value="no"> No</label>
+        <label><input type="radio" name="suscripcion_boletin" value="si"/> Sí</label>
+        <label><input type="radio" name="suscripcion_boletin" value="no"/> No</label>
       </div>
       <!-- Datos de contacto -->
       <div class="datos-contacto">
         <h4>Datos de contacto</h4>
         <div class="input-group">
           <label for="nombre">🪪 Nombre completo :</label>
-          <input type="text" id="nombre" name="nombre_completo" placeholder="Tu nombre" required>
+          <input type="text" id="nombre" name="nombre_completo" placeholder="Tu nombre" required/>
         </div>
         <div class="input-group">
           <label for="correo">📧 Correo electrónico:</label>
-          <input type="email" id="correo" name="correo_electronico" placeholder="correo@ejemplo.com" required>
+          <input type="email" id="correo" name="correo_electronico" placeholder="correo@ejemplo.com" required/>
         </div>
         <div class="input-group">
           <label for="telefono">📱 Número de celular:</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="Tu número">
+          <input type="tel" id="telefono" name="telefono" placeholder="Tu número"/>
         </div>
       </div>
       <!-- Comentarios -->
       <h4>Comentarios o sugerencias:</h4>
       <textarea name="comentarios" rows="5" placeholder="Escribe aquí tus ideas o sugerencias..."></textarea>
       <!-- Opciones de Formspree -->
-      <input type="hidden" name="_subject" value="Nuevo compromiso ambiental - Proyecto Verde">
-      <input type="hidden" name="_next" value="https://gloriapalian.github.io/GRACIAS.html">
-      <input type="submit" value="Enviar Compromiso">
+      <input type="hidden" name="_subject" value="Nuevo compromiso ambiental - Proyecto Verde"/>
+      <input type="hidden" name="_next" value="https://gloriapalian.github.io/GRACIAS.html"/>
+      <input type="submit" value="Enviar Compromiso"/>
       <p style="text-align:center;"><a href="index.html">← Volver al inicio</a></p>
     </form>
   </main>
@@ -116,13 +116,20 @@
   </footer>
 
   <script>
-    // Al enviar el formulario, se ejecuta el reset para limpiar los datos
+    // Limpia el formulario después de enviarlo
     document.getElementById('form-compromiso').addEventListener('submit', function(event){
-      // opcional: retrasar un poco para asegurar que el formulario se envie antes de limpiar
       setTimeout(() => {
         this.reset();
       }, 500);
     });
+
+    // Limpia el formulario si la página vuelve del historial (back button)
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) {
+        document.getElementById('form-compromiso').reset();
+      }
+    });
   </script>
 </body>
 </html>
+
